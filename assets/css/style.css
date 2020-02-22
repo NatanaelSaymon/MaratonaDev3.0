@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/*RESET CSS*/
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/*TITULOS*/
+header h1, main h2{
+    margin-bottom: 70px;
+}
+
+main h2 span{
+    color: crimson;
+}
+
+.form h2{
+    text-align: right;
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+/*ESTRUTURAS*/
+header, main, footer{
+    text-align: center;
+}
+
+header, .form, main{
+    /*ESPAÇAMENTOS COM MARGENS*/
+    margin: 0 auto 70px;
+    /*LIMITIS DOS ELEMENTOS NA PAGINA*/
+    width:90%;
+    max-width: 500px;
+}
+
+/*header*/
+header button{
+    margin-top: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: crimson;
+    color: #fff;
+    border: 1px solid crimson;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*logo*/
+.logo{
+    width: 120px;
+    margin: 70px 0;
+}
+
+/*FORM*/
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px; /*espaçamento da lateral*/
+    align-items: center;
+    background-color: crimson;
+    padding: 16px 64px;
+    border-radius: 6px;
+}
+
+form input, 
+form button{
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-sizing: border-box; /*corrigindo o comportamento do padrão css*/
+    border: 1px solid #ffffff88;
+    cursor: pointer;
+}
+
+form input{
+    background-color: transparent;
+}
+
+form input::placeholder{
+    color: #ffffffaa;
+}
+
+form button{
+    font-weight: bold;
+}
+
+section.donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/***************FOOTER***************/
+footer{
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #eee;
+}
