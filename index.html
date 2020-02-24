@@ -30,8 +30,8 @@
     <section class="form hide">
         <h2>Entre na lista de Doadores</h2>
         <!--input entrada de dados-->
-        <form action="/">
-            <input type="text" name="nome" placeholder="Nome Completo">
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome Completo">
 
             <input type="email" name="email" placeholder="Email">
 
@@ -46,33 +46,16 @@
         <H2>Ultimos <span>doadores</span></H2>
 
         <section class="donors">
+            <!--ESTRUTURA DE REPETIÇÃO-->
+            {% for donor in donors %}
             <div class="donor">
                 <div class="blood">
-                    AB+
+                    {{donor.blood}}
                 </div>
-                <p>Suellen Souza</p>
+                <p>{{donor.name}}</p>
             </div>
+            {% endfor %}
 
-            <div class="donor">
-                <div class="blood">
-                    AB+
-                </div>
-                <p>Natanael</p>
-            </div>
-
-            <div class="donor">
-                <div class="blood">
-                    AB+
-                </div>
-                <p>Cacau Souza</p>
-            </div>
-
-            <div class="donor">
-                <div class="blood">
-                    AB+
-                </div>
-                <p>Natsu Souza</p>
-            </div>
         </section>
     </main>
     <!--CONTEUDO CENTRAL-->
